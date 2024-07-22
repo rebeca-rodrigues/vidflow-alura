@@ -19,6 +19,11 @@
   justify-content: center;
 }
 
+.cabecalho__icones__item {
+  display: flex;
+  justify-content: center;
+}
+
 /* SECAO SUPERIOR */
 
 .superior__slider {
@@ -99,12 +104,23 @@
 
 @media (min-width: 834px) {
 
+/* CABEÇALHO */
+
+.cabecalho__pesquisar__item {
+  display: block;
+  width: 300px;
+}
+
+.pesquisar__input {
+  width: 200px;
+}
+
   /* MENU LATERAL*/
 
   .menu__container {
     left: 0;
     height: auto;
-    width: 74px;
+    width: 81px;
     top: 80px;
   }
 
@@ -117,15 +133,15 @@
 }
 
 @media (min-width: 1156px) {
+  
   /* CABEÇALHO */
 
   .cabecalho__pesquisar__item {
-    display: block;
-    transform: translate(-60px);
+    width: 500px;
   }
 
   .pesquisar__input {
-    width: 530px;
+    width: 400px;
   }
 
   /* SECAO SUPERIOR */
@@ -135,55 +151,36 @@
     justify-content: center;
     align-items: center;
   }
+
+    /* MENU LATERAL*/
+
+    .menu__container {
+      width: 239px;
+      overflow: scroll;
+    }
+  
+    /*Mostra itens do menu que só são visíveis no layout de desktop*/
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+      display: flex;
+    }
+  
+    .menu__lista {
+      height: auto;
+      padding: 20px 17px 20px 15px;
+      gap: 15px;
+    }
+  
+    .menu__itens {
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+    }
+  
+    /*Inverte ordem da coluna (pq no HTML estão listadas na ordem contrária do que devem aparecer)*/
+    .menu__lista:nth-child(3) {
+      flex-direction: column-reverse;
+    }
 }
 
-@media (min-width: 1440px) {
-
-  /* MENU LATERAL*/
-
-  .menu__container {
-    width: 239px;
-    overflow: scroll;
-  }
-
-  /*Mostra itens do menu que só são visíveis no layout de desktop*/
-  .menu__lista:nth-child(2),
-  .menu__lista:nth-child(3),
-  .menu__lista:nth-child(4) {
-    display: flex;
-  }
-
-  .menu__lista {
-    height: auto;
-    padding: 20px 17px 20px 15px;
-    gap: 15px;
-  }
-
-  .menu__itens {
-    flex-direction: row;
-    gap: 15px;
-    align-items: center;
-  }
-
-  /*Inverte ordem da coluna (pq no HTML estão listadas na ordem contrária do que devem aparecer)*/
-  .menu__lista:nth-child(3) {
-    flex-direction: column-reverse;
-  }
-
-  /*Coloca itens na posição correta dentro da lista (parent) em que estão inseridos*/
-  .jogos {
-    order: 3;
-  }
-
-  .filmes {
-    order: 2;
-  }
-
-  .premium {
-    order: 1;
-  }
-
-  .maispagina {
-    order: 4;
-  }
-}

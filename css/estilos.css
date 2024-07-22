@@ -40,6 +40,11 @@ body {
     cursor: pointer;
 }
 
+.logo__item img {
+    max-height: 28px;
+    height: auto;
+}
+
 .pesquisar__input {
     padding: 8px;
     border: 2px solid var(--cinza-claro);
@@ -47,10 +52,10 @@ body {
     font-size: 16px;
 }
 
-.pesquisar__input-teclado{
+.pesquisar__input-teclado {
     position: absolute;
-    right: 16%;
-    top: 30%;
+    right: 34%;
+    top: 35%;
 }
 
 .pesquisar__btn {
@@ -156,6 +161,10 @@ body {
 .menu__container {
     font-size: 14px;
     background-color: var(--branco);
+}
+
+.menu__item-inicio {
+    font-weight: 500;
 }
 
 .icone__inicio::before {
@@ -318,10 +327,11 @@ iframe{
         height: 100vh;
     }
 
-    /* ESTILOS DO MENU LATERAL */
+    /* MENU LATERAL */
 
     .menu__container {
-        font-size: 16px;
+        padding: 0px 15px;
+        font-size: 14px;
     }
 
     .menu__lista {
@@ -332,7 +342,7 @@ iframe{
         width: 100%;
     }
 
-    /* ESTILOS DA SECAO SUPERIOR */
+    /* SECAO SUPERIOR */
 
     .superior__secao__container {
         border-top: var(--azul-medio) 1px solid;
@@ -341,7 +351,7 @@ iframe{
         left: 82px;
     }
 
-    /*ESTILOS SEÇÃO VÍDEOS */
+    /* VÍDEOS */
 
     .videos__container {
         padding-left: 90px;
@@ -350,7 +360,13 @@ iframe{
 
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 1156px) {
+
+    /* CABEÇALHO */
+
+    .pesquisar__input-teclado {
+        right: 21%;        
+    }
 
     /* SEÇÃO SUPERIOR */
 
@@ -358,13 +374,13 @@ iframe{
         left: 247px;
     }
 
-    /* ESTILOS DO MENU LATERAL */
+    /* MENU LATERAL */
 
     .menu__lista {
         border-bottom: 1.5px solid var(--azul-medio);
     }
 
-    /* ESTILOS VIDEOS */
+    /* VIDEOS */
 
     .videos__container {
         padding-right: 10px;
